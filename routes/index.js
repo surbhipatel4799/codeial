@@ -8,12 +8,14 @@ const homeController = require('../controllers/home_controller');
 console.log("router loaded");
 
 router.get('/', homeController.home);
-router.use('/users', require('./users'));
+router.get('/contact', homeController.contact);
 
 // for further routes
 // router.use('/routerName', require('routerFile'));
 
+router.use('/users', require('./users'));
 router.use('/likes', require('./likes'));
+router.use('/posts', require('./posts'));
 
 // export router to be available to index.js
 module.exports = router;
