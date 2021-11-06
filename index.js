@@ -6,6 +6,9 @@ const expressLayouts = require('express-ejs-layouts');
 // before using route (includes ejs views) configure layouts
 app.use(expressLayouts);
 
+// define assets
+app.use(express.static('./assets'));
+
 // use express router
 app.use('/', require('./routes/index'));
 
