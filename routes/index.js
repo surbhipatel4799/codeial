@@ -16,6 +16,7 @@ router.get('/contact', homeController.contact);
 router.use('/users', require('./users'));
 // router.use('/likes', require('./likes'));
 router.use('/posts', require('./posts'));
+router.use('/comments', require('./comments'));
 
 // export router to be available to index.js
 module.exports = router;

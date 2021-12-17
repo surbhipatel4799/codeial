@@ -11,7 +11,8 @@ module.exports.home = function(req, res){
     //     });
     // });
 
-    // populate the user of each post
+    // prepopulate the user of each post
+    // shift call back to exec
     Post.find({}).populate('user').exec(function(err, posts){
         return res.render('home',{
             title: "Codeial | Home",
